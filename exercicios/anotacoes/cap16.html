@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 16</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        div#sombra {
+            margin: 20px auto;
+            text-align: center;
+            height: 20px;
+            background-color: orange;
+            width: 100px;
+            box-shadow: 4px 4px 2px 0px rgba(0, 0, 0, 0.418);
+        }
+
+        div#borda {
+            background-color: lightskyblue;
+            height: 50px;
+            width: 200px;
+            margin: 20px auto;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        div#bordadif {
+            background-color: black;
+            height: 100px;
+            width: 200px;
+            margin: 20px auto;
+            border-radius: 30px 15px 50px 5px;
+        }
+
+        div#bola {
+            height: 100px;
+            width: 100px;
+            background-color: brown;
+            margin: 20px auto;
+            border-radius: 50%;
+        }
+
+        div#video {
+            text-align: center;
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Modelos de Caixa</h1>
+        <p>Os chamados box</p>
+        <h2>Aninhamento</h2>
+        <p>Caixas dentro de caixas</p>
+        <img src="imagens/aninhamento.png" alt="foto de aninhamento">
+        <p>Como exemplo uma tag h1 tem sua altura (height) e sua largura (width).</p>
+        <p>Algumas definições extras:</p>
+        <ul>
+            <li>border - borda</li>
+            <li>padding - preenchimento</li>
+            <li>margin - margem/ espaçamento</li>
+            <li>outline - contorno (fora do contorno)</li>
+        </ul>
+        <h2>Tipos de Box</h2>
+        <p>Box-level e inline-level</p>
+        <h3>Box-level</h3>
+        <p>o Box será numa linha própria</p>
+        <h3>inline-level</h3>
+        <p>Na linha, é possível haver outras coisas na mesma linha</p>
+        <img src="imagens/tipos-box.png" alt="">
+        <h3>Exemplos de tags</h3>
+        <p>box-level:</p>
+        <ul>
+            <li>div</li>
+            <ul><li>mais utilizado</li></ul>
+            <li>h1 - h6</li>
+            <li>p</li>
+            <li>main</li>
+            <li>header</li>
+            <li>nav</li>
+            <li>article</li>
+            <li>aside</li>
+            <li>footer</li>
+            <li>form</li>
+            <li>video</li>
+        </ul>
+        <p>inline-level:</p>
+        <ul>
+            <li>span</li>
+            <li>a</li>
+            <li>code</li>
+            <li>small</li>
+            <li>strong</li>
+            <li>em</li>
+            <li>sup - sub</li>
+            <li>label</li>
+            <li>button</li>
+            <li>input</li>
+            <li>select</li>
+        </ul>
+
+        <h2>Comprimento no CSS</h2>
+        <h3>Sentido Horário</h3>
+        <p>A edição do tamanho de algumas propriedades no CSS é feita no sentido horário:
+        <br>Como assim?
+        </p>
+        <code>padding: 10px 15px 10px 20px;</code>
+        <p>Cada um é o comprimento em uma direção</p>
+        <p>1ª em cima - 2ª a direita - 3ª embaixo - 4ª a esquerda.</p>
+        <p>Pode se dizer que é cada valor girando no sentido horário.</p>
+        <h3>Mesmo comprimento em todas as direções</h3>
+        <p>Caso em todas as direções tenham o mesmo comprimento, pode utilizar apenas um valor.</p>
+        <code>margin: 10px;</code>
+
+        <h3>Dois valores</h3>
+        <code>padding: 10px 20px;</code>
+        <p>1ª em cima e baixo - 2ª direita e esquerda.</p>
+
+        <p>Algumas propriedades que funcionam </p>
+        <ul>
+            <li>padding</li>
+            <li>margin</li>
+            <li>border</li>
+            <li>outline</li>
+        </ul>
+
+        <h2>Grouping Tags</h2>
+        <p>Agrupando o código com as box semanticamente</p>
+        <p>Com elas ajuda na organização do código e leitura</p>
+
+        <p>Ao invês de utilizar a mesma box, como utilizar apenas div, se dá mais significado no código do site. <br> Como na divisão da estrutura do site:</p>
+        <ul>
+            <li>header - cabeçalho</li>
+            <li>main - Conteúdo principal</li>
+            <li>footer - rodapé</li>
+        </ul>
+        <ul>
+            <li>nav - navegação no cabeçalho</li>
+            <li>article - artigo</li>
+            <li>section - seção</li>
+        </ul>
+
+        <h1>Sombras nas caixas</h1>
+        <code>box-shadow: 4px 4px 2px 0px black;</code>
+        <p>Cuidado, não precisa exagerar</p>
+        <p>Coloque preta, e com transparência</p>
+        <p>1ª deslocamento horizontal - 2ª deslocamento vertical - 3ª blur - 4ª espalhamento - 5ª cor (rgb, rgba)</p>
+        <div id="sombra">Hello</div>
+       
+        <h1>Bordas</h1>
+       <h2>Bordas Arredondadas</h2>
+        <code>border-radius: 20px;</code>
+        <div id="borda"> Bonita</div>
+        <code>border-radius: 30px 15px 50px 5px;</code>
+        <ol>
+            <li>top-left</li>
+            <li>top-right</li>
+            <li>bottom-right</li>
+            <li>bottom-left</li>
+        </ol>
+        <div id="bordadif"></div>
+        <p>Se for um quadrado é possível fazer uma bola</p>
+        <code>border-radius: 50%;</code>
+        <div id="bola"></div>
+
+        <h2>Bordas Decoradas</h2>
+        <code>border-image</code>
+        <p>Vídeo do Guanabara sobre como usar Bordas decoradas</p>
+        <div id="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/n0rjAs_Im4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        
+
+        <p><a href="html-css.html">Ver curso completo</a></p>
+    </main>
+</body>
+</html>

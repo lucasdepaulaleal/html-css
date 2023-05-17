@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 14</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Fontes no CSS</h1>
+        <h2>font-family</h2>
+        <p>Ao abrir font-family, é onde escolhe a fonte, sendo possível colocar mais opções caso a primeira não funcione. <br> É chamada de safe combination.</p>
+        <pre><code>
+            h1 {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </code></pre>
+        <p>1° Usa a primeira fonte, se não utiliza a segunda, caso também não funcione ele vai para a terceira. <br>A 3° no caso vai procurar uma fonte sem serifa sozinho.</p>
+
+        <h2>Tamanho, Peso, Estilo, shorthand</h2>
+        <h3>Tamanho</h3>
+        <p>font-size <br>Medidas Absolutas: <br>cm, mm, in, px, pt, pc <br>Medidas Relativas: <br>em, ex, rem, vw, vh, %</p>
+        <p>Mais usados são <strong>em</strong> e <strong>px</strong>.</p>
+        <h4>em</h4>
+        <p>Tamanho do corpo da fonte. 1em = 1x; 2em = 2 vezes o tamanho da fonte...</p>
+
+        <h3>peso</h3>
+        <p>font-weight <br>lighther, normal, bold, bolder</p>
+        
+        <h3>estilo</h3>
+        <p>font-style <br>ex. italic</p>
+        
+        <h3>shorthand (reduzido)</h3>
+        <p>font: style weight size family;</p>
+        <p>Em um só é possível agrupar todos</p>
+        <pre><code>font: italic bolder 3em Arial;</code></pre>
+        <p>A ordem <br>font-style -> font-weight -> font-size -> font-family;</p>
+
+        <h2>Fontes com Google Fonts</h2>
+        <p>O Google Fonts é um reportório cheio de fontes para usar gratuitamente.</p>
+        <h3>Como usar fontes externas?</h3>
+        <p>Pode importar do google fonts, ele disponibiliza o código</p>
+        <p>Ele disponibilizará a Regra da fonte para colocar no CSS e a Declaração para usar a fonte.</p>
+        <h4>Regra no CSS</h4>
+        <p>Regras no CSS são indicadas pelo @</p>
+        <p>Como devem ser utilizá-las?</p>
+        <ul>
+            <li>Deve estar nas Primeiras linhas do CSS</li>
+            <li>Não pode colocar dentro de um seletor</li>
+        </ul>
+        <p>Exemplo:</p>
+        <code>
+            @import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        </code>
+        <p>Para utilizar a fonte: <br> font-family: 'Marck Script', cursive;
+        </p>
+
+        <p><a href="cap14-3.html">Página 3</a></p>
+        <p><a href="cap14.html">Voltar para página 1</a></p>
+    </main>
+</body>
+</html>

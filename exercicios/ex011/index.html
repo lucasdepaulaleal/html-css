@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+    <title>Mídias em HTML5</title>
+    
+    <style>
+        body {
+            font: 15px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes 
+    ou simplesmente aumente e diminua o tamanho do seu navegador.
+    </p>
+    
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <p>1940's Slow Dance</p>
+    <!-- <audio src="midia/1940-slow-dance.mp3" controls></audio> -->
+    <!-- Formatos: MP3 WAV OGG -->
+    <audio preload="metadata" controls> 
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.ogg" type="audio/ogg">
+        <source src="midia/guanacast-33.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/guanacast-33.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+    </audio>
+    
+    <h2>Colocando áudios</h2>
+    <h3>1° Tag</h3>
+    <pre><code>
+        &lt;audio src="local do arquivo"&gt;
+    </code></pre>
+    
+    <h3>tag audio com tag source</h3>
+    <pre><code>
+        &lt;audio&gt;
+            &lt;source src="midia/guanacast-33.mp3" type="audio/mpeg"&gt;  
+        &lt;/audio&gt;
+        </code></pre>
+    <h4>Tem mais type dependendo do formato do arquivo</h4>
+    <ul>
+        <code>
+            <li>&lt;source src="local" type="audio/wav"&gt;</li>
+        </code>
+        <code>
+            <li>&lt;source src="local" type="audio/ogg"&gt;</li>
+        </code>
+            <ul type="circle">
+                <li>formato mais pesado EVITE usá-lo</li>
+            </ul>
+    </ul>
+    
+    <h3>Parâmetros da tag audio</h3>
+    <ol>
+        <li><strong>preload</strong></li>
+        <ul>
+            <li>auto</li>
+            <ul>
+                <li>Considera que o site terminou de carregar quando terminar de carregar todo o áudio. <br>
+                <strong>Cuidado!</strong> Se o arquivo for grande ele irá demorar para carregar o áudio todo, logo, demorará pra considerar que o site carregou.</li>
+                <li>Vem por <strong>Padrão</strong> esta opção.</li>
+            </ul>
+            <li>metadata</li>
+            <ul>
+                <li>Carrega apenas o básico, como nome e duração.</li>
+            </ul>
+            <li>none</li>
+            <ul>
+                <li>Carregará Nada.</li>
+            </ul>
+        </ul>
+
+        <li><strong>autoplay</strong></li>
+        <p>O áudio é tocado automaticamente quando atualizada a página.</p>
+        <p><code>&lt;audio src="local" autoplay&gt;</code></p>
+        
+        <li><strong>controls</strong></li>
+        <p>Adiciona Controles de áudio.</p>
+        <audio src="midia/1940-slow-dance.mp3" controls></audio>
+        <p><code>&lt;audio src="local" controls&gt;</code></p>
+        
+        <li><strong>loop</strong></li>
+        <p>o som reiniciará após terminar, entrando em Loop.</p>
+        <code>&lt;audio src="local" loop&gt;</code>
+    </ol>
+    
+    <h2>Áudio tem Direito Autoral</h2>
+    <p>As músicas também podem ter direitos autorais, assim como imagens e vídeos.</p>
+    <p>Ao utilizar um som com direitos autorais sem autorização pode acarretar em problemas para ti.</p>
+    <p>Utilizar sons sem direitos autorais é uma solução.</p>
+    <h3>Sons sem direitos autorais</h3>
+    <p>No Youtube tem um local cheio de sons que podem ser utilizados livremente, e dependendo será necessário apenas colocar os créditos do som.</p>
+    <h4>Como encontrar:</h4>
+    <ol>
+        <li>Vá no <a href="https://www.youtube.com" target="_blank" rel="external">Youtube</a></li>
+        <li>Entre no Youtube Studio</li>
+        <li>Entre na seção Biblioteca de áudio</li>
+    </ol>
+    <p><strong>Pronto!</strong> Lá estará diversos sons disponíveis para download e utilizar no seu site sem preocupações!&#128512;&#x1F44D</p>
+
+    <h1>Colocando Vídeos</h1>
+    <p>É possível colocar vídeos em seu site.</p>
+    <h2>Vídeos sem direitos autorais</h2>
+    <p>No site <a href="https://www.pexels.com/pt-br/" target="_blank" rel="external">Pexels</a> tem vídeos disponíveis gratuitamente para utilizar.</p>
+    <h2>Formatos de Vídeo</h2>
+    <ul>
+        <li>MP4</li>
+        <li>M4V</li>
+        <li>WebM</li>
+        <li>OGV</li>
+    </ul>
+    <h3>Converter vídeos</h3>
+<p>Clique aqui para acessar a página completa sobre <a href="../ex012/index.html" target="_blank" rel="external">Vídeos no HTML5</a></p> <!-- ERROO NO LINK -->
+    <p>O programa Handbrake é leve e gratuito.</p>
+    <p>O download está disponível no <a href="https://handbrake.fr" target="_blank" rel="external">site da Handbrake.</a></p>
+
+</body>
+</html>

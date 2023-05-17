@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 15</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+         div > p {
+            display: none;
+        }
+        
+        div:hover > p {
+            display: block;
+            color: white;
+            background-color: red;
+        }
+
+        div:hover {
+            color: red;
+        }
+
+        div.codigo {
+            background-color: rgb(97, 94, 94);
+        }
+        
+        code {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Seletores no CSS</h1>
+        <h2>ID</h2>
+        <p>ID é o identificador</p>
+        <p>Ele é introduzido dentro de uma tag. exemplo: <br>
+        &lt;h1 id="principal"&gt;</p>
+        <p>No CSS para selecioná-lo utiliza a #, exemplo: <br>h1#principal</p>
+        <p>Só é possível identificar 1 elemento</p>
+        
+        <h2>Class</h2>
+        <p>Classificam um elemento. <br>Podem ser usados em mais de um elemento.</p>
+        <p>&lt;h2 class="basico"&gt;</p>
+        <p>No CSS o seletor é . <br>Exemplo: <br>
+        h2.basico</p>
+        <p><strong>.</strong></p>
+        <h3>tag span</h3>
+        <p>É apenas uma forma de selecionar uma parte do texto. <br>
+        Uma forma de alterar algo dentro do texto no css, sem alterar todo o texto.</p>
+        
+        <h2>Pseudo-Classes em CSS</h2>
+        <p>Representado pelo: <strong>:</strong></p>
+        <div class="codigo">
+            <pre>
+                <code>
+                div > p {
+                    display: none;
+                }
+            
+                div:hover > p {
+                    display: block;
+                    color: white;
+                    background-color: red;
+                }
+                
+                div:hover {
+                    color: red;
+                }
+                </code>
+            </pre>
+        </div>
+        <p>Exemplo de hover</p>
+        <p>Passe o mouse sobre o texto abaixo</p>
+        <div class="divhover">Passe o mouse aqui
+            <p>Texto escondido com display: none;</p>
+        </div>
+        <h3>Hover</h3>
+        <p>Pseudo classe que ativa quando passar por cima</p>
+        <h4>display</h4>
+        <dl>
+            <dt>none</dt>
+            <dd>Vai desaparecer</dd>
+            <dt>block</dt>
+            <dd>Mostrará na tela</dd>
+        </dl>
+        <h3>> = children</h3>
+        <p>Acessar uma tag dentro da outra</p>
+        <p>Neste exemplo, caso queira acessar a tag p dentro da div.</p>
+        <div class="codigo">
+            <pre><code>
+                &lt;div&gt;
+                    &ltp&gt;Texto aqui&lt/p&gt;
+                &lt/div&gt;
+            </code></pre>
+        </div>
+        <p>No CSS neste exemplo usando o hover</p>
+        <div class="codigo">
+            <pre><code>
+                div:hover > p
+            </code></pre>
+        </div>
+        <p><a href="cap15-2.html">Página 2</a></p>
+        <p><a href="html-css.html">Ver Curso Completo</a></p>
+    </main>
+</body>
+</html>

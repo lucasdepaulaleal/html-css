@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 15</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        a:active {
+            color: red;
+        }
+
+        .seletores {
+            font-weight: bold;
+            display: none;
+        }
+
+        #pseudoelement {
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .expseudoelement {
+            text-align: center;
+            background-color: rgb(114, 119, 119);
+            color: rgb(247, 239, 135);
+        }
+
+        .expseudoelement::before {
+            content: '⇒';
+            font-weight: bold;
+        }
+
+        .expseudoelement::after {
+            content: '⇐';
+            font-weight: bold;
+        }
+
+        div:hover > ul {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Mais Pseudo-Classes</h1>
+        <h2>visited</h2>
+        <p>Bom para links. Se o link já foi visitado.</p>
+        <ul>
+            <li><a href="https://www.youtube.com" target="_blank">Youtube</a></li>
+            <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">Gmail</a></li>
+        </ul>
+        <h2>active</h2>
+        <p>Irá fazer as declarações quando clicado, ao clicar</p>
+        <p>Experimente clicar e segurar no link abaixo</p>
+        <p><a href="https://youtube.com" target="_blank">Youtube</a></p>
+        <h1>Pseudo-Elemento</h1>
+        <p>Adicionam elementos no conteúdo, sem precisar estar no HTML. Representado por este elemento:</p>
+        <p id="pseudoelement"><strong>::</strong></p>
+        <p class="expseudoelement">As setas foram adicionadas por CSS</p>
+        
+
+        <h1>Seletores Personalizados</h1>
+        <div>
+            <p>Passe o mouse aqui para ver os seletores</p>
+            <ul class="seletores">
+                <li>#  = id</li>
+                <li>.  = class</li>
+                <li>:  = pseudo-class</li>
+                <li>:: = pseudo-element</li>
+                <li>>  = children</li>
+            </ul>
+        </div>
+        <p><a href="cap15.html">Voltar a página 1</a></p>
+    </main>
+</body>
+</html>

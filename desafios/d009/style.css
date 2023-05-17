@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(66, 63, 63);
+    font: 15px Arial;
+    color: aliceblue;
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
